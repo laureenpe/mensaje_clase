@@ -22,20 +22,19 @@
         var ElementosMitexto = document.getElementsByClassName("mensaje");
         alert("Hay " + ElementosMitexto.length + " elementos de la clase mensaje");
 
-        function message() {
-
-            if (ElementosMitexto.length == 1) {
-                alert(mensaje.innerHTML = "Es muy poco!");
-                if (ElementosMitexto.length >= 4) {
-                    alert(mensaje.innerHTML = "No esta mal");
-                } else {
-                    alert(mensaje.innerHTML = " Son muchos")
-                }
+        function mostrarMensaje() {
+            var retornar;
+            var msje = document.getElementsByClassName('mensaje');
+            if (msje.length == 1) {
+                retornar = "Es muy poco";
+            } else if (msje.length == 2 && msje.length < 4) {
+                retornar = "No está mal";
+            } else {
+                retornar = "Son muchos!";
             }
-
-
-        }
-        message()
+            return retornar;
+        };
+        alert("Los elementos de la clase: " + mostrarMensaje());
 
         //var ElementosMitexto = document.getElementsByClassName("mensaje");
         // alert("Hay " + ElementosMitexto.length + " elementos de la clase mensaje");
