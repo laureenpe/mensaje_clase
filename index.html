@@ -19,11 +19,25 @@
 
     <script>
         //Escribe aquí tu código Javascript
-        var ElementosMitexto = document.getElementsByClassName("mensaje"); //compruebo cuantos elementos hay
+        /* var ElementosMitexto = document.getElementsByClassName("mensaje"); //compruebo cuantos elementos hay
         alert("Hay " + ElementosMitexto.length + " elementos de la clase mensaje");
 
         var mostrarRes = document.getElementById("resultado"); //se llama elemento a cambiar coninnerenla linea deabajo.
-        alert(mostrarRes.innerHTML = "Son muchos!");
+        alert(mostrarRes.innerHTML = "Son muchos!"); */
+
+        function mostrarMensaje() {
+            var retornar;
+            var msje = document.getElementsByClassName('mensaje');
+            if (msje.length == 1) {
+                retornar = "Es muy poco";
+            } else if (msje.length == 2 && msje.length < 4) {
+                retornar = "No está mal";
+            } else {
+                retornar = "Son muchos!";
+            }
+            return retornar;
+        };
+        alert("Los elementos de la clase: " + mostrarMensaje());
     </script>
 </body>
 
